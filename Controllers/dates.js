@@ -9,13 +9,19 @@ function isInViewport(el) {
     );
 }
 
-// Animar secciones al hacer scroll
+// Animar secciones al hacer scroll y cuando se carga la página
 const sections = document.querySelectorAll("section");
 
-window.addEventListener("scroll", function() {
+function animateSections() {
     sections.forEach(section => {
         if (isInViewport(section)) {
             section.classList.add("in-view");
         }
     });
-});
+}
+
+// Verificar la visibilidad de las secciones al cargar la página
+window.addEventListener("DOMContentLoaded", animateSections);
+
+// Verificar la visibilidad de las secciones al hacer scroll
+window.addEventListener("scroll", animateSections);
