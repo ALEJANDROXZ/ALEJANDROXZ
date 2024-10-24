@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Compras</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="/Styles/tabla_compras.css">
+</head>
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Administrar Compras</h2>
+
+        <!-- Tabla de compras -->
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Usuario</th>
+                    <th>Carrito</th>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Total</th>
+                    <th>Comprobante</th>
+                    <th>Aprobación</th>
+                </tr>
+            </thead>
+            <tbody id="compras-table-body">
+                <!-- Los datos de las compras se cargarán aquí -->
+            </tbody>
+        </table>
+
+        <!-- Botón para volver a Admin -->
+        <div class="text-center mt-4">
+            <button class="btn btn-primary" onclick="window.location.href='admin.html'">Volver a Admin</button>
+        </div>
+    </div>
+
+    <!-- Modal para mostrar el comprobante de pago -->
+    <div class="modal fade" id="receiptModal" tabindex="-1" aria-labelledby="receiptModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="receiptModalLabel">Comprobante de Pago</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="receiptImage" class="img-fluid" alt="Comprobante de Pago">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS de Administración de Compras -->
+    <script type="module" src="/Controllers/tabla_compras.js"></script>
+</body>
+</html>

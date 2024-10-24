@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivero - Productos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="/Styles/productos.css">
+</head>
+<body>
+
+    <!-- Barra de navegación con el mismo color base -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4CAF50;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/Resources/icono.png" alt="Logo del vivero" class="img-fluid" style="width: 50px;">
+                <span class="vivero-name">Tulipán y Rama</span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/dates.html">¿Quiénes somos?</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Templates/contacto.html">Contacto</a></li>
+                    <!-- Botón de carrito -->
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light" id="cart-button" data-bs-toggle="modal" data-bs-target="#cartModal">Carrito</button>
+                    </li>
+                    <button id="salir" class="btn btn-danger btn-block mt-3">Salir</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Nuestros Productos</h2>
+
+            <!-- Categoría: Plantas -->
+            <h3 class="text-center">Plantas</h3>
+            <div class="row" id="productos-plantas">
+                <!-- Los productos de plantas se cargarán aquí -->
+            </div>
+
+            <!-- Categoría: Flores -->
+            <h3 class="text-center mt-5">Flores</h3>
+            <div class="row" id="productos-flores">
+                <!-- Los productos de flores se cargarán aquí -->
+            </div>
+
+            <!-- Categoría: Herramientas de Jardinería -->
+            <h3 class="text-center mt-5">Herramientas de Jardinería</h3>
+            <div class="row" id="productos-jardineria">
+                <!-- Los productos de jardinería se cargarán aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para detalles del producto -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="modal-product-image" class="img-fluid" src="" alt="Imagen del producto">
+                        </div>
+                        <div class="col-md-6">
+                            <h4 id="modal-product-name"></h4>
+                            <p id="modal-product-description"></p>
+                            <h5>Precio: $<span id="modal-product-price"></span></h5>
+                            <div class="input-group mb-3">
+                                <label for="product-quantity" class="mr-2">Cantidad:</label>
+                                <input type="number" id="product-quantity" class="form-control" value="1" min="1" style="width: 70px;">
+                            </div>
+                            <h5>Total: $<span id="modal-product-total"></span></h5>
+                            <button class="btn btn-primary mt-3" id="add-to-cart">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cart-items">
+                        <!-- Los productos en el carrito se cargarán aquí -->
+                    </div>
+                    <h5>Total: $<span id="cart-total"></span></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentModal">Pagar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Pago -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">Pago</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Detalles de tu Carrito:</h5>
+                    <div id="payment-cart-items">
+                        <!-- Productos del carrito en el modal de pago -->
+                    </div>
+                    <h5>Total a pagar: $<span id="payment-cart-total"></span></h5>
+                    <form id="payment-form">
+                        <div class="mb-3">
+                            <label for="buyer-name" class="form-label">Nombre del Comprador</label>
+                            <input type="text" class="form-control" id="buyer-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="shipping-address" class="form-label">Dirección de Envío</label>
+                            <input type="text" class="form-control" id="shipping-address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="payment-method" class="form-label">Método de Pago</label>
+                            <input type="text" class="form-control" id="payment-method" value="Nequi: +57 311 8770606" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="payment-receipt" class="form-label">Subir Comprobante de Pago</label>
+                            <input type="file" class="form-control" id="payment-receipt" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Confirmar Pago</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS de Productos -->
+    <script type="module" src="/Controllers/productos_user.js"></script>
+</body>
+</html>

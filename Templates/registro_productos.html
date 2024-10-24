@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Productos</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="/Styles/registro_productos.css">
+</head>
+<body>
+
+    <!-- Contenedor general -->
+    <div class="container mt-5">
+        <h2 class="text-center">Registrar Producto</h2>
+        <div class="card p-4 mt-4">
+            <form id="form-register">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="edttipo">Tipo de Producto</label>
+                        <select class="form-control" id="edttipo" required>
+                            <option value="">Seleccionar tipo</option>
+                            <option value="10">Planta</option>
+                            <option value="20">Flor</option>
+                            <option value="30">Jardinería</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="edtcodigo">Código</label>
+                        <input type="text" class="form-control" id="edtcodigo" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="edtname">Nombre del Producto</label>
+                        <input type="text" class="form-control" id="edtname" placeholder="Nombre del producto" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="edtprecio">Precio</label>
+                        <input type="number" class="form-control" id="edtprecio" placeholder="Precio" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="edtdesc">Descripción</label>
+                    <textarea class="form-control" id="edtdesc" rows="3" placeholder="Descripción del producto" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fileimg">Imagen del Producto</label>
+                    <input class="form-control" type="file" id="fileimg" required>
+                </div>
+                <button type="button" class="btn btn-success btn-block" id="btnregister">Registrar Producto</button>
+            </form>
+        </div>
+
+        <div class="mt-5 text-center">
+            <button class="btn btn-primary mx-2" onclick="window.location.href='/Templates/tabla_productos.html'">Ver Productos</button>
+            <button class="btn btn-secondary mx-2" onclick="window.location.href='admin.html'">Volver a Admin</button>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS de Registro de Producto -->
+    <script type="module" src="/Controllers/registro_productos.js"></script>
+</body>
+</html>
