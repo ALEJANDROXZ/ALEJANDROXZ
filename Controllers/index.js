@@ -104,3 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('DOMContentLoaded', () => {
     login.addEventListener('click', logear);
 });
+
+/* Script para aplicar animaciones al cargar la página */
+window.addEventListener('DOMContentLoaded', (event) => {
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section) => {
+        section.classList.add('in-view');
+    });
+});
