@@ -12,12 +12,6 @@
 .neon-border {
     border: 2px solid #80FF80;
     box-shadow: 0 0 5px #80FF80, 0 0 10px #80FF80;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.neon-border:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px #80FF80, 0 0 20px #80FF80;
 }
 
 /* Tamaño fijo para todas las imágenes */
@@ -65,28 +59,12 @@ body {
 /* Estilo del cuadro blanco alrededor del texto */
 section {
     padding: 60px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.8); /* Cuadro blanco semitransparente */
     border-radius: 10px; /* Bordes redondeados */
     margin: 20px auto;
     max-width: 90%; /* Ancho máximo del cuadro */
     padding: 40px; /* Espacio dentro del cuadro */
     font-weight: bold; /* Negrita en la sección */
-}
-
-/* Animación de aparición */
-.animate-section {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards; /* Animación de aparición */
-}
-
-/* Definición de la animación */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Footer personalizado */
