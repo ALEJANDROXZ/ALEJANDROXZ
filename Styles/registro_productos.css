@@ -1,0 +1,57 @@
+/* Fondo de la página */
+body {
+    background-image: url('/Resources/fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Título principal */
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #333; /* Color oscuro para mejor visibilidad */
+    margin-bottom: 30px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+}
+
+/* Estilo para el formulario */
+.form-control {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones */
+.btn {
+    font-size: 1.2rem;
+    padding: 15px;
+    width: 45%;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 10px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.mt-5.text-center button {
+    width: 30%;
+    font-size: 1.1rem;
+}

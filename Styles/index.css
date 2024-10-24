@@ -1,0 +1,98 @@
+/* Estilo para el nombre del vivero en la barra de navegación */
+.vivero-name {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    text-shadow: 0 0 3px rgba(0, 255, 0, 0.5), 0 0 6px rgba(0, 255, 0, 0.7);
+}
+
+/* Barra de navegación fija */
+.navbar {
+    background-color: #4CAF50;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: auto;
+}
+
+/* Efecto hover en los botones de la barra de navegación */
+.navbar-nav .nav-link:hover {
+    background-color: #3e8e41;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Fondo de la página */
+body {
+    background-image: url('/Resources/fondo1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Estilo del contorno neón en el formulario */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 10px;
+    box-shadow: 0 0 5px #80FF80, 0 0 10px #80FF80;
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+    text-align: center;
+}
+
+.login-container:hover {
+    box-shadow: 0 0 10px #80FF80, 0 0 20px #80FF80;
+    transform: scale(1.02);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.login-container a {
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

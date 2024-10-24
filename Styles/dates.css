@@ -1,0 +1,93 @@
+/* Estilo para el nombre del vivero en la barra de navegación */
+.vivero-name {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-weight: bold; /* Texto en negrita */
+    text-shadow: 0 0 3px rgba(0, 255, 0, 0.5), 0 0 6px rgba(0, 255, 0, 0.7);
+}
+
+/* Efecto neón suave en imágenes con agrandamiento */
+.neon-border {
+    border: 2px solid #80FF80;
+    box-shadow: 0 0 5px #80FF80, 0 0 10px #80FF80;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.neon-border:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #80FF80, 0 0 20px #80FF80;
+}
+
+/* Barra de navegación fija */
+.navbar {
+    background-color: #4CAF50;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: auto;
+}
+
+/* Efecto hover en los botones de la barra de navegación */
+.navbar-nav .nav-link:hover {
+    background-color: #3e8e41;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Fondo de la página */
+body {
+    background-image: url('/Resources/fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Justificación de texto */
+.justificado {
+    text-align: justify;
+    font-weight: bold; /* Texto en negrita para el cuerpo del texto */
+}
+
+/* Estilo del cuadro blanco alrededor del texto */
+section {
+    padding: 60px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.8); /* Cuadro blanco semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px auto;
+    max-width: 90%; /* Ancho máximo del cuadro */
+    padding: 40px; /* Espacio dentro del cuadro */
+    font-weight: bold; /* Negrita en la sección */
+}
+
+/* Animación de aparición al hacer scroll */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer personalizado */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold; /* Negrita en el texto del footer */
+}

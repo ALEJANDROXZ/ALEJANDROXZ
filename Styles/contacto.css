@@ -1,0 +1,117 @@
+/* Fondo de la página */
+body {
+    background-image: url('/Resources/fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo para el nombre del vivero en la barra de navegación */
+.vivero-name {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1.8rem;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.6), 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+/* Barra de navegación fija */
+.navbar {
+    background-color: #4CAF50;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    padding: 10px 0;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: auto;
+}
+
+/* Efecto hover en los botones de la barra de navegación */
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #3e8e41;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: #fff;
+}
+
+/* Sección de contacto */
+#contacto {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Sombras mejoradas */
+    max-width: 900px; /* Limitar el ancho del cuadro */
+    margin: 40px auto; /* Centrar el cuadro */
+}
+
+#contacto h2 {
+    font-weight: bold;
+    color: #4CAF50;
+    text-shadow: 0 0 7px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.7);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contacto h4 {
+    color: #333;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Iconos sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    margin: 0 20px; /* Aumentar el espacio entre íconos */
+    text-decoration: none;
+    text-align: center;
+    color: #4CAF50;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    color: #3e8e41;
+}
+
+.social-icons img {
+    width: 40px;
+    height: auto;
+}
+
+/* Footer personalizado */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave en el footer */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}

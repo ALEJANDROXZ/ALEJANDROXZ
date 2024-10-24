@@ -1,0 +1,105 @@
+/* Fondo de la página */
+body {
+    background-image: url('/Resources/fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Estilo de la tabla con borde neón */
+.table {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    border-radius: 10px;
+}
+
+/* Cabecera de la tabla en tonos verdes */
+.table thead {
+    background-color: #3e8e41;
+    color: #fff;
+}
+
+/* Celdas de la tabla */
+.table tbody tr:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Imagen en la tabla */
+.table img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+/* Botones de acción con un tamaño uniforme y estilo */
+.btn-warning, .btn-danger {
+    width: 100px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #ffcc00;
+    box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+}
+
+.btn-danger:hover {
+    background-color: #ff6666;
+    box-shadow: 0 0 10px #ff6666, 0 0 20px #ff6666;
+}
+
+/* Botón para registrar producto */
+.btn-block {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-block:hover {
+    box-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50;
+}
+
+/* Estilos para el modal */
+.modal-header {
+    background-color: #4CAF50;
+    color: white;
+    border-bottom: 1px solid #00ff00;
+}
+
+.modal-footer .btn {
+    width: 120px;
+}
+
+.modal-footer .btn-danger {
+    background-color: #ff4444;
+    border: none;
+}
+
+.modal-footer .btn-danger:hover {
+    background-color: #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* Estilos adicionales del modal */
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+/* Ajuste del texto en los formularios */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+}

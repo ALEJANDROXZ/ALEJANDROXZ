@@ -1,0 +1,40 @@
+/* Fondo de la página */
+body {
+    background-image: url('/Resources/fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Título principal */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #000; /* Cambiado a negro */
+    margin-bottom: 30px;
+}
+
+/* Botones de la página */
+.btn {
+    font-size: 1.2rem;
+    padding: 15px;
+    width: 100%;
+    text-shadow: none; /* Sin sombra en los textos */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
