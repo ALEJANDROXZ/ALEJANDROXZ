@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivero - ¿Quiénes somos?</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="/styles/dates.css">
+</head>
+<body>
+
+    <!-- Barra de navegación con logo y botón de inicio de sesión -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/Resources/icono.png" alt="Logo del vivero">
+                <span class="vivero-name">Tulipán y Rama</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Templates/user/dates_user.html">¿Quiénes somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/templates/productos_user.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/templates/user/contacto_user.html">Contacto</a>
+                    </li>
+                    <!-- Botón de inicio de sesión -->
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="/index.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección ¿Quiénes somos? -->
+    <section id="quienes-somos" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">¿Quiénes somos?</h2>
+            <div class="row">
+                <div class="col-md-6 img-hover-zoom mb-3">
+                    <img src="/Resources/producto1.jpg" class="img-fluid rounded neon-border" alt="Nuestra historia">
+                </div>
+                <div class="col-md-6">
+                    <p class="justificado">
+                        Somos un vivero comprometidos con ofrecerte las mejores plantas y productos para tu jardín. Nuestro equipo está formado por expertos que aman lo que hacen y están listos para ayudarte a encontrar las mejores opciones para ti.
+                    </p>
+                    <p class="justificado">
+                        Contamos con una gran variedad de plantas, árboles y productos relacionados con el cuidado de las plantas, para que puedas darle vida a tus espacios.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de productos -->
+    <section id="productos" class="text-center py-5 bg-light">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <p>Explora nuestra gran variedad de productos.</p>
+            <div class="row">
+                <div class="col-md-4 img-hover-zoom">
+                    <img src="/Resources/img1.jpg" class="img-fluid rounded neon-border" alt="Producto 1">
+                    <h4>Plantas de interior</h4>
+                </div>
+                <div class="col-md-4 img-hover-zoom">
+                    <img src="/Resources/img2.jpg" class="img-fluid rounded neon-border" alt="Producto 2">
+                    <h4>Árboles frutales</h4>
+                </div>
+                <div class="col-md-4 img-hover-zoom">
+                    <img src="/Resources/img3.jpg" class="img-fluid rounded neon-border" alt="Producto 3">
+                    <h4>Equipo de Jardinería</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vivero. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Vinculamos el archivo JS -->
+    <script src="/controllers/dates.js"></script>
+
+    <!-- Bootstrap JS y Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
